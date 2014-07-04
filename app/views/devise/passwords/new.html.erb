@@ -1,0 +1,27 @@
+<div class="container">
+
+	<div class="row" style="margin-top:20px">
+	  <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+	    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+	      <%= devise_error_messages! %>
+	      <fieldset>
+	        <h2>Forgot Password</h2>
+	          <div class="row">
+		        <div class="form-group">
+		        <hr class="colorgraph">
+		          <%= f.email_field :email, autofocus: true, id: "email", placeholder: "Email Address", class: "form-control input-lg" %>
+		        </div>          
+
+	        <hr class="colorgraph">
+	        <div class="row">
+	          <div class="col-xs-6 col-sm-6 col-md-6">
+	            <%= f.submit "Email Password", class: "btn btn-green btn-block btn-lg" %>
+	          </div>
+
+	        </div>
+	      </fieldset>
+	    <% end %>
+	  </div>
+	</div>
+
+</div>
