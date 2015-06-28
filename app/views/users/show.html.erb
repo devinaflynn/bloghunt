@@ -1,0 +1,74 @@
+<% body_class "user" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-4 user-pic">
+      <%= image_tag @user.avatar.url(:small), class: "img-rounded user-image", style: "width:200px;height:200px;" %>
+      <div class="panel panel-default" style="width:200px;">
+        <div class="panel-body panel-heading">
+          <h2 class="user-name text-center"><%=@user.username%>
+            
+            
+            </h2>
+
+        </div>
+        <div class="panel-footer">
+        <h4 class=" text-center">
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+              <span class="glyphicon glyphicon-star"></span>
+            </h4>
+        </div>
+      </div>
+    </div>
+
+      
+    <div class="col-md-8 col-md-offset-1 user-port">
+
+      <div class="panel panel-default main-panel">
+        <div class="panel-heading">
+          <h1 class="panel-header">Portfolio</h1>
+        </div>
+        <div class="panel-body">
+
+
+        <div class="row">
+          <% @apps.each do |app| %>
+            <div class="col-md-6">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <%=link_to( image_tag(app.image.url(:medium), :class => "img-rounded app-image", :style => "width:100%; height:300px;"), app_path(app)) %>
+                </div>
+                <div class="panel-footer">
+                    <h4><%=app.name%>
+                    <% if app.user == current_user %>
+                      <%= link_to 'Edit', edit_app_path(app), class: "btn btn-warning buy" %>
+                    <% end %>
+                    <span class="label label-primary pull-right">37 sales</span>
+                    <span class="label label-default pull-right buy">220</span>
+                    <div class="clearfix"></div>
+                    </h4>
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+
+         
+
+
+        </div>
+        <div class="panel-footer main-footer">
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+</div>

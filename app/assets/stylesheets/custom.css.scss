@@ -1,51 +1,70 @@
+/* Sass Variables */
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$body-bg: #fff;
+
+$navbar-height: 55px;
+$navbar-default-bg: #33AD5C;
+$navbar-default-link-color: #fff;
+$navbar-default-link-hover-color: #000;
+$navbar-default-link-hover-bg: #fff;
+$navbar-default-link-active-bg: #5b5b5b;
+$navbar-default-link-active-color: #fff;
+$navbar-margin-bottom: 0px;
+
+$nav-tabs-link-hover-border-color: none;
+$nav-tabs-link-hover-color: #fff;
+
+$container-large-desktop: 1240px;
+$container-lg: $container-large-desktop;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+/* Dropdown on hover */
+.dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu {
+    display: block;
+ }
+
 /* Similar Apps Slider */
-.col-item
-{
+.col-item {
     border: 1px solid #E1E1E1;
     border-radius: 5px;
     background: #FFF;
 }
-.col-item .photo img
-{
+.col-item .photo img {
     margin: 0 auto;
     width: 100%;
 }
-
-.col-item .info
-{
+.col-item .info {
     padding: 10px;
     border-radius: 0 0 5px 5px;
     margin-top: 1px;
 }
-
 .col-item:hover .info {
     background-color: #fbfbfb;
 }
-.col-item .price
-{
+.col-item .price {
     /*width: 50%;*/
     float: left;
     margin-top: 5px;
 }
 
-.col-item .price h5
-{
+.col-item .price h5 {
     line-height: 20px;
     margin: 0;
 }
 
-.price-text-color
-{
+.price-text-color {
     color: #2f8cdd;
 }
 
-.col-item .info .rating
-{
+.col-item .info .rating {
     color: #777;
 }
 
-.col-item .rating
-{
+.col-item .rating {
     /*width: 50%;*/
     float: left;
     font-size: 17px;
@@ -191,16 +210,12 @@ fieldset[disabled] .btn-green.active {
   background-color: #ffffff; 
 }
 
-
 /* Green Button */
-
-
 .btn-purple { 
   color: #ffffff; 
   background-color: #802FDD; 
   border-color: #4c1c84; 
 } 
- 
 .btn-purple:hover, 
 .btn-purple:focus, 
 .btn-purple:active, 
@@ -210,13 +225,11 @@ fieldset[disabled] .btn-green.active {
   background-color: #6625B0; 
   border-color: #4c1c84; 
 } 
- 
 .btn-purple:active, 
 .btn-purple.active, 
 .open .dropdown-toggle.btn-purple { 
   background-image: none; 
 } 
- 
 .btn-purple.disabled, 
 .btn-purple[disabled], 
 fieldset[disabled] .btn-purple, 
@@ -235,8 +248,137 @@ fieldset[disabled] .btn-purple.active {
   background-color: #802FDD; 
   border-color: #4c1c84; 
 } 
- 
 .btn-purple .badge { 
   color: #802FDD; 
   background-color: #ffffff; 
+}
+
+/* Panels */
+.panel-user {
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+.main-panel > .panel-heading {
+  height:60px;
+  color: #282828;
+  padding-top:18px;
+  background:#f6f6f6;
+  border-bottom:3px solid #c9c9c9;
+}
+.panel-header {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 27px;
+}
+.panel-header > .nav-tabs > li > a:hover {
+  font-size: 17px;
+  padding: 7px 15px;
+  color: #fff;
+  background: #c9c9c9;
+}
+
+/* User Profile */
+.user {
+  background: url(http://upload.wikimedia.org/wikipedia/commons/f/f7/Melbourne_Docklands_-_Yarras_Edge_-_marina_panorama.jpg) no-repeat; 
+  background-size: 1450px 350px;
+  background-color: #ddd;
+  
+}
+.user-pic {
+  margin-top: 140px !important;
+}
+.user-app {
+  margin-top:20px !important;
+}
+.app-pic {
+  width: 300px;
+}
+.user-port {
+  margin-top: 200px !important;
+}
+.user-image {
+  border: 5px solid white;
+}
+.user-name {
+  margin-top: 0px;
+}
+.user-btn {
+  margin-top:5px !important;
+}
+.app-image {
+  height:300px;
+}
+
+/* Navbar */
+.navbar-default .navbar-nav > li > a {
+  font-size:18px;
+}
+.navbar-toggle {
+  background-color: white;
+}
+.navbar {
+  border-radius: 0px;
+}
+
+/*Panel tabs*/
+.panel-tabs {
+    position: relative;
+    bottom: 30px;
+    clear:both;
+    border-bottom: 1px solid transparent;
+}
+.panel-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.panel-tabs > li > a {
+    margin-right: 2px;
+    margin-top: 4px;
+    line-height: .85;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+    color: #ffffff;
+}
+.panel-tabs > li > a:hover {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: transparent;
+}
+.panel-tabs > li.active > a,
+.panel-tabs > li.active > a:hover,
+.panel-tabs > li.active > a:focus {
+    color: #fff;
+    cursor: default;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255, .23);
+    border-bottom-color: transparent;
+}
+
+/*Profile - Show?*/
+.profile {
+  background: #fff;
+  width: 100%;
+  margin-left:3px;
+  margin-top:10px;
+  margin-bottom:10px;
+  padding-bottom:8px;
+  padding-top:8px;
+}
+
+/*Show Panel*/
+.show-panel  {
+  border: none;
+}
+.show-panel > .panel-heading {
+  background-color: #bdbdbd;
+}
+.show-panel > .panel-heading > h3 {
+  color: #fff;
+  font-size:18px;
+}
+.modal-xl {
+  width:95%;
 }

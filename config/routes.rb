@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  root 'pages#home'
+  resources :apps
+  resources :users
+  
+  root 'apps#index'
 
   get 'pages/show'
   get 'pages/box'
+  get 'users/:id' => 'users#show'
+  get 't/:tag', to: 'apps#index', as: :tag
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

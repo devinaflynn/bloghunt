@@ -9,4 +9,8 @@ module ApplicationHelper
     end
   end
 
+  def body_class(class_name="")
+    content_for :body_class, class_name
+  end
+
 end

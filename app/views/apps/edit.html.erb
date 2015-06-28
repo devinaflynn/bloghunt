@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+
+      <div class="panel panel-default main-panel">
+        <div class="panel-heading">
+          <h1 class="panel-header">
+          	Edit App
+          	<%= image_tag @app.image.url(:thumb), class: "pull-right img-thumbnail" %>
+
+          </h1>
+        </div>
+        <div class="panel-body">
+			<%= render 'form' %>
+		</div>
+				<div class="panel-footer">
+					<%= link_to 'Delete', @app, method: :delete, class: "btn btn-danger pull-right", data: { confirm: 'Are you sure?' } %>
+
+					<%= link_to 'Show', @app, class: "btn btn-green" %>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

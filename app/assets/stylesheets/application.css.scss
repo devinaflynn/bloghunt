@@ -14,60 +14,10 @@
  *= require_self
  */
 
-
-$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
-$body-bg: #e5e5e5;
-
-$navbar-height: 55px;
-$navbar-default-bg: #898989;
-$navbar-default-link-color: #fff;
-$navbar-default-link-hover-color: #fff;
-$navbar-default-link-hover-bg: #727272;
-$navbar-default-link-active-bg: #5b5b5b;
-$navbar-default-link-active-color: #fff;
-
-$nav-tabs-link-hover-border-color: none;
-$nav-tabs-link-hover-color: #fff;
-
-$container-large-desktop: 1240px;
-$container-lg: $container-large-desktop;
-
-
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
-
-
-.main-panel > .panel-heading {
-  height:60px;
-  color: #282828;
-  padding-top:18px;
-  background:#dcdcdc;
-  border-bottom:3px solid #a3a3a3;
-}
-.panel-header {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 27px;
-}
-.panel-header > .nav-tabs > li > a:hover {
-  font-size: 17px;
-  padding: 7px 15px;
-  color: #fff;
-  background: #c9c9c9;
-}
-
 .main-footer {
-  background: #ddd;
+  background: #fff;
   color: #000;
   height: 10px;
-}
-.navbar-default .navbar-nav > li > a {
-  font-size:18px;
-}
-.navbar {
-  border-radius: 0px;
 }
 .btn-panel {
   padding: 0px 10px;
@@ -88,14 +38,12 @@ $container-lg: $container-large-desktop;
 .panel-header > .nav-tabs > li > a {
   font-size:17px;
   padding: 7px 15px;
-  color: #7d7d7d;
-  background:#c9c9c9;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
   color: #fff;
-  background: #898989;
+  background: #2f8cdd;
 }
-
+.panel-header > .nav-tabs > li > a:hover {
+  background:#2f6fdd;
+}
 
 /* Indicators list style */
 .article-slide .carousel-indicators {
@@ -131,59 +79,6 @@ $container-lg: $container-large-desktop;
 
 
 }
-
-/*Panel tabs*/
-.panel-tabs {
-    position: relative;
-    bottom: 30px;
-    clear:both;
-    border-bottom: 1px solid transparent;
-}
-
-.panel-tabs > li {
-    float: left;
-    margin-bottom: -1px;
-}
-
-.panel-tabs > li > a {
-    margin-right: 2px;
-    margin-top: 4px;
-    line-height: .85;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-    color: #ffffff;
-}
-
-.panel-tabs > li > a:hover {
-    border-color: transparent;
-    color: #ffffff;
-    background-color: transparent;
-}
-
-.panel-tabs > li.active > a,
-.panel-tabs > li.active > a:hover,
-.panel-tabs > li.active > a:focus {
-    color: #fff;
-    cursor: default;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    background-color: rgba(255,255,255, .23);
-    border-bottom-color: transparent;
-}
-
-.show-panel  {
-  border: none;
-}
-.show-panel > .panel-heading {
-  background-color: #a3a3a3;
-}
-.show-panel > .panel-heading > h3 {
-  color: #fff;
-  font-size:18px;
-}
-
-
 
 
 .glyphicon { margin-right:5px;}

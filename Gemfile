@@ -29,6 +29,18 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'rb-readline'
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
+gem 'impressionist'
+gem 'acts-as-taggable-on', '~> 3.0.0'
+
+group :development, :test do
+     gem 'sqlite3'
+end
+
+group :production do
+     gem 'pg'
+     gem 'rails_12factor'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
