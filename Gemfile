@@ -31,6 +31,7 @@ gem 'rb-readline'
 gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'impressionist'
 gem 'acts-as-taggable-on', '~> 3.0.0'
+gem 'aws-sdk', '~> 1.20.0'
 
 group :development, :test do
      gem 'sqlite3'
