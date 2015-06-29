@@ -7,6 +7,8 @@ class AppsController < ApplicationController
 
   def index
 
+    
+
     @tags = ActsAsTaggableOn::Tag.all
 
     if params[:most_viewed]
