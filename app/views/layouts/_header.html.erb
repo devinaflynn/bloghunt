@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" style="border-bottom: none;">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -16,24 +16,26 @@
 
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-        <li><%= link_to 'New Blog', new_app_path %></li>
-        <li><%= link_to 'Box', pages_box_path %></li>
-      <% end %>
+       <li><%= link_to '+ Blog', new_app_path %></li>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle nav-links" data-toggle="dropdown">Account <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <% if user_signed_in? %>
+         
+
               <li><%= link_to "Profile", current_user %></li>
               <li><%=link_to "Settings", edit_user_registration_path %></li>
               <li class="divider"></li>
               <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-              <li><%= link_to "Sign Up", new_user_registration_path %></li>
-            <% end %>
+            
+           
+            
           </ul>
         </li>
-        <% unless user_signed_in? %>
-          <li><%= button_to "Log in", new_user_session_path, class: "btn btn-inverse navbar-btn", method: :get %></li>
+        <% else %>
+          <li><%= button_to "Log in", new_user_session_path, class: "btn btn-default navbar-btn", method: :get %></li>
+          <li><%= button_to "Sign Up", new_user_registration_path, class: "btn btn-danger navbar-btn", method: :get %></li>
+        
         <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

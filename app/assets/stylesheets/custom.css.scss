@@ -4,7 +4,7 @@ $font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $body-bg: #fff;
 
 $navbar-height: 55px;
-$navbar-default-bg: #33AD5C;
+$navbar-default-bg: #2b934e;
 $navbar-default-link-color: #fff;
 $navbar-default-link-hover-color: #000;
 $navbar-default-link-hover-bg: #fff;
@@ -130,7 +130,7 @@ $container-lg: $container-large-desktop;
 /* Blue Button */
 .btn-blue { 
   color: #FFFFFF; 
-  background-color: #2f8cdd; 
+  background-color: #1575D6;
 } 
 .btn-blue:hover, 
 .btn-blue:focus, 
@@ -280,7 +280,7 @@ fieldset[disabled] .btn-purple.active {
 
 /* User Profile */
 .user {
-  background: url(http://upload.wikimedia.org/wikipedia/commons/f/f7/Melbourne_Docklands_-_Yarras_Edge_-_marina_panorama.jpg) no-repeat; 
+  background: url(http://i.imgur.com/CwwxXHS.png) no-repeat; 
   background-size: 1450px 350px;
   background-color: #ddd;
   
@@ -382,3 +382,5 @@ fieldset[disabled] .btn-purple.active {
 .modal-xl {
   width:95%;
 }
+
+

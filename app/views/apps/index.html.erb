@@ -1,8 +1,5 @@
 
-
-
-
-<div class="container">
+  <div class="container">
   <div class="row">
     <div class="col-md-12">
 
@@ -12,12 +9,12 @@
           <br/>
           <div class="col-md-6">
             <% @tags.each do |f| %>
-              <%= link_to f, tag_path("#{f}"), class: "btn btn-md btn-default", style: "margin-top: 5px;" %>
+              <%= link_to f, tag_path("#{f}"), class: "btn btn-md btn-default", style: "margin-top: 5px; margin-bottom: 5px;" %>
             <% end %>
           </div>
 
             <div class="btn-group pull-right">
-              <button type="button" class="btn btn-lg btn-blue dropdown-toggle" data-toggle="dropdown">
+              <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
                 <%= params[:most_viewed].nil? ? "Most Viewed": params[:most_viewed].classify %> <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
@@ -25,7 +22,7 @@
                 <li><%= link_to "This Week", root_path(most_viewed: "week") %></li>
                 <li><%= link_to "This Month", root_path(most_viewed: "month") %></li>
                 <li class="divider"></li>
-                <li><a href="#">All Time</a></li>
+                <li><%= link_to "This Year", root_path(most_viewed: "year") %></li>
               </ul>
             </div>
           </h1>
@@ -34,7 +31,7 @@
 
 
           <div class="clearfix"></div>
-          
+          </div>
         </div>
 
 
@@ -54,7 +51,7 @@
 
 
         
-                          <%=link_to( image_tag(app.image.url(:medium), :class => " app-image", :style => "width:100%; height:250px;"), app.url, target: "_blank") %> 
+                          <%=link_to( image_tag(app.image.url(:medium), :class => " app-image", :style => "width:100%; height:250px;"), app_path(app)) %> 
 
 
                           
@@ -96,7 +93,7 @@
                   <div class="panel-footer">
                     <h4><%=app.name%>
                      
-                    <span class="label label-default pull-right buy"><%=app.impressionist_count%> views</span>
+                    <span class="pull-right"><%=app.impressionist_count%> views</span>
 
                       <!-- Modal -->
                       <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -130,7 +127,7 @@
             <% end %>
           </div>
 
-        </div>
+       
         <div class="panel-footer main-footer">
 
         </div>
@@ -138,4 +135,5 @@
 
     </div>
   </div>
+
 

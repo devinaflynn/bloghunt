@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140713171340) do
+ActiveRecord::Schema.define(version: 20150701000742) do
 
   create_table "apps", force: true do |t|
     t.string   "name"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20140713171340) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.integer  "impressions_count"
+    t.string   "description"
   end
 
   add_index "apps", ["user_id"], name: "index_apps_on_user_id"

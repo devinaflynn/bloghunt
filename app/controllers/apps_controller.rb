@@ -7,8 +7,6 @@ class AppsController < ApplicationController
 
   def index
 
-    
-
     @tags = ActsAsTaggableOn::Tag.all
 
     if params[:most_viewed]
@@ -34,6 +32,13 @@ class AppsController < ApplicationController
           daily_views.keys.each do |app_id|
             @apps << App.find(app_id)
           end 
+         when "year"
+          daily_views = Impression.where(impressionable_type: "App").where("created_at >= ?", (DateTime.now - 1.year)).group("impressionable_id").count
+          daily_views = Hash[daily_views.sort_by{|key, value| value}.reverse]
+          @apps = []
+          daily_views.keys.each do |app_id|
+            @apps << App.find(app_id)
+          end  
       end
     elsif params[:tag]
       @apps = App.tagged_with(params[:tag])
@@ -57,7 +62,7 @@ class AppsController < ApplicationController
   def create
     @app = current_user.apps.build(app_params)
     if @app.save
-      redirect_to @app, notice: 'App was successfully created.'
+      redirect_to current_user, notice: 'App was successfully created.'
     else
       render action: 'new'
     end
@@ -89,6 +94,6 @@ class AppsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def app_params
-      params.require(:app).permit(:name, :url, :image, :tag_list)
+      params.require(:app).permit(:name, :url, :description, :image, :tag_list)
     end
 end

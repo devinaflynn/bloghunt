@@ -12,15 +12,7 @@
             </h2>
 
         </div>
-        <div class="panel-footer">
-        <h4 class=" text-center">
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-              <span class="glyphicon glyphicon-star"></span>
-            </h4>
-        </div>
+        
       </div>
     </div>
 
@@ -44,10 +36,10 @@
                 <div class="panel-footer">
                     <h4><%=app.name%>
                     <% if app.user == current_user %>
-                      <%= link_to 'Edit', edit_app_path(app), class: "btn btn-warning buy" %>
+                      <%= link_to 'Edit', edit_app_path(app), class: "btn btn-blue buy" %>
                     <% end %>
-                    <span class="label label-primary pull-right">37 sales</span>
-                    <span class="label label-default pull-right buy">220</span>
+                    <span class="pull-right"><%=app.impressionist_count%> views</span>
+                   
                     <div class="clearfix"></div>
                     </h4>
                   </div>
