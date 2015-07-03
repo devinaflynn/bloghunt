@@ -3,8 +3,9 @@ $font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
 $body-bg: #fff;
 
+
 $navbar-height: 55px;
-$navbar-default-bg: #2b934e;
+$navbar-default-bg: #028090;
 $navbar-default-link-color: #fff;
 $navbar-default-link-hover-color: #000;
 $navbar-default-link-hover-bg: #fff;
@@ -130,7 +131,7 @@ $container-lg: $container-large-desktop;
 /* Blue Button */
 .btn-blue { 
   color: #FFFFFF; 
-  background-color: #1575D6;
+  background-color: #05668D;
 } 
 .btn-blue:hover, 
 .btn-blue:focus, 
@@ -138,7 +139,7 @@ $container-lg: $container-large-desktop;
 .btn-blue.active, 
 .open .dropdown-toggle.btn-blue { 
   color: #FFFFFF !important; 
-  background-color: #1575D6; 
+  background-color: #05668D; 
 } 
 .btn-blue:active, 
 .btn-blue.active, 
@@ -213,8 +214,8 @@ fieldset[disabled] .btn-green.active {
 /* Green Button */
 .btn-purple { 
   color: #ffffff; 
-  background-color: #802FDD; 
-  border-color: #4c1c84; 
+  background-color: #028090; 
+  border-color: #028090; 
 } 
 .btn-purple:hover, 
 .btn-purple:focus, 
@@ -222,8 +223,8 @@ fieldset[disabled] .btn-green.active {
 .btn-purple.active, 
 .open .dropdown-toggle.btn-purple { 
   color: #ffffff !important; 
-  background-color: #6625B0; 
-  border-color: #4c1c84; 
+  background-color:#028090; 
+  border-color: #028090; 
 } 
 .btn-purple:active, 
 .btn-purple.active, 
