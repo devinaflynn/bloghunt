@@ -4,17 +4,13 @@
     <div class="col-md-12">
 
       <div class="panel-heading">
-          <h3 class="panel-header"> <small>Choose a blog or category to start learning...</small>
+          <h3 class="panel-header"> <small>Explore the best startup blogs and add your own!</small>
           <br />
           <br/>
-          <div class="col-md-6">
-            <% @tags.each do |f| %>
-              <%= link_to f, tag_path("#{f}"), class: "btn btn-md btn-default", style: "margin-top: 5px; margin-bottom: 5px;" %>
-            <% end %>
-          </div>
+          
 
             <div class="btn-group pull-right">
-              <button type="button" class="btn btn-lg btn-blue dropdown-toggle" data-toggle="dropdown">
+              <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
                 <%= params[:most_viewed].nil? ? "Most Viewed": params[:most_viewed].classify %> <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu">
