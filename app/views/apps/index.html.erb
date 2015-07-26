@@ -3,12 +3,14 @@
   <div class="row">
     <div class="col-md-12">
 
-      <div class="panel-heading">
-          <h3 class="panel-header"> <small>Explore the best startup blogs and add your own!</small>
-          <br />
-          <br/>
-          
+ 
 
+          <h4>Explore the best startup blogs or add your own!</h4>
+
+      <div class="panel-heading">
+          <h3 class="panel-header">
+
+          <div class="col-md-2 col-md-offset-5">
             <div class="btn-group pull-right">
               <button type="button" class="btn btn-lg btn-default dropdown-toggle" data-toggle="dropdown">
                 <%= params[:most_viewed].nil? ? "Most Viewed": params[:most_viewed].classify %> <span class="caret"></span>
@@ -22,6 +24,7 @@
               </ul>
             </div>
           </h1>
+          </div>
 
 
 
@@ -36,9 +39,10 @@
 
           <div class="row">
             <% @apps.each do |app| %>
-            
 
-              <div class="col-md-3">
+           
+
+              <div class="col-md-3 col-xs-10 col-sm-4">
                 <div class="panel panel-default">
                   <div class="panel-body" style="padding:0px;">
   
@@ -53,7 +57,7 @@
                           
 
                           
-                          
+                       
                       </div>
                       <style type="text/css">
                       /* just some styles to define the size of slider */
@@ -131,5 +135,6 @@
 
     </div>
   </div>
+
 
 

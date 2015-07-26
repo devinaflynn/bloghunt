@@ -9,9 +9,7 @@
 		  		<h1 class="panel-header">
                   <%= @app.name %> 
 
-                  <% @app.tag_list.each do |f| %>
-                  <%= link_to f, tag_path(f), class: "btn btn-sm btn-default" %>
-                  <% end %>
+                  
 		  			<% if @app.user == current_user %>
                       <%= link_to 'Edit', edit_app_path(@app), class: "btn btn-blue buy" %>
                     <% end %>
@@ -23,6 +21,10 @@
 		  		</h1>
 	    	</div>
 		  	<div class="panel-body">
+
+        <% @app.tag_list.each do |f| %>
+                  <%= link_to f, tag_path(f), class: "btn btn-sm btn-default" %>
+                  <% end %>
 
 		    	<div class="row">
 
