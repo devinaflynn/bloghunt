@@ -43,7 +43,7 @@ class BlogsController < ApplicationController
     elsif params[:tag]
       @blogs = Blog.tagged_with(params[:tag])
     else
-      @blogs = Blog.all.paginate(:page => params[:page], :per_page => 12)
+      @blogs = Blog.all.paginate(:page => params[:page], :per_page => 30)
     end
   end
 
