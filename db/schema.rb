@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701000742) do
+ActiveRecord::Schema.define(version: 20150727000418) do
 
-  create_table "apps", force: true do |t|
+  create_table "blogs", force: true do |t|
     t.string   "name"
     t.string   "url"
     t.datetime "created_at"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20150701000742) do
     t.string   "description"
   end
 
-  add_index "apps", ["user_id"], name: "index_apps_on_user_id"
+  add_index "blogs", ["user_id"], name: "index_blogs_on_user_id"
 
   create_table "impressions", force: true do |t|
     t.string   "impressionable_type"

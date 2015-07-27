@@ -1,4 +1,4 @@
-class App < ActiveRecord::Base
+class Blog < ActiveRecord::Base
 	belongs_to :user
 
 	is_impressionable :counter_cache => true

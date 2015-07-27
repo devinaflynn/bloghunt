@@ -7,14 +7,14 @@
       <div class="panel panel-default main-panel">
         <div class="panel-heading">
 		  		<h1 class="panel-header">
-                  <%= @app.name %> 
+                  <%= @blog.name %> 
 
                   
-		  			<% if @app.user == current_user %>
-                      <%= link_to 'Edit', edit_app_path(@app), class: "btn btn-blue buy" %>
+		  			<% if @blog.user == current_user %>
+                      <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-blue buy" %>
                     <% end %>
 		    		<ul class="nav nav-tabs pull-right" role="tablist">
-			  			<li><a href="<%= @app.url %>">Go to Blog</a></li>
+			  			<li><a href="<%= @blog.url %>">Go to Blog</a></li>
 						</ul>
 
 						<div class="clearfix"></div>
@@ -22,7 +22,7 @@
 	    	</div>
 		  	<div class="panel-body">
 
-        <% @app.tag_list.each do |f| %>
+        <% @blog.tag_list.each do |f| %>
                   <%= link_to f, tag_path(f), class: "btn btn-sm btn-default" %>
                   <% end %>
 
@@ -33,7 +33,7 @@
 		          
 			    		<div id="gallery-1" class="royalSlider rsDefault">
 
-							   <%=link_to( image_tag(@app.image.url(:medium), :class => " app-image", :style => "width:85%; height:300px;"), @app.url, target: "_blank") %> 
+							   <%=link_to( image_tag(@blog.image.url(:medium), :class => " blog-image", :style => "width:85%; height:300px;"), @blog.url, target: "_blank") %> 
 								
 									  
 			  			</div>
@@ -43,13 +43,13 @@
 						</div>
 
 			 			<div class="col-md-5">
-			  			<div class="panel panel-default user-app">
+			  			<div class="panel panel-default user-blog">
 			    			<div class="panel-heading">
 			      			<h3 class="panel-header">
 			      				<div class="pull-right">
 			        				
 			      				</div>
-			      				<%=@app.impressionist_count%> views
+			      				<%=@blog.impressionist_count%> views
 
 			      					
 				  				</h3>
@@ -62,7 +62,7 @@
 			  				<div class="col-md-12">
 									<div class="panel panel-default show-panel ">
 
-                  <h4><%=@app.description%> </h4>
+                  <h4><%=@blog.description%> </h4>
                   
 
 
@@ -110,7 +110,7 @@
           globalCaption: false,
           globalCaptionInside: false,
           thumbs: {
-            appendSpan: true,
+            blogendSpan: true,
             firstMargin: true,
             paddingBottom: 4
           }
