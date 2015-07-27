@@ -11,7 +11,7 @@
 
                   
 		  			<% if @blog.user == current_user %>
-                      <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-blue buy" %>
+                      <%= link_to 'Edit', edit_blog_path(@blog), class: "btn btn-default" %>
                     <% end %>
 		    		<ul class="nav nav-tabs pull-right" role="tablist">
 			  			<li><a href="<%= @blog.url %>">Go to Blog</a></li>
