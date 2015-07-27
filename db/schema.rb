@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150727000418) do
+ActiveRecord::Schema.define(version: 20150727170835) do
 
   create_table "blogs", force: true do |t|
     t.string   "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20150727000418) do
     t.datetime "image_updated_at"
     t.integer  "impressions_count"
     t.string   "description"
+    t.string   "slug"
   end
 
   add_index "blogs", ["user_id"], name: "index_blogs_on_user_id"

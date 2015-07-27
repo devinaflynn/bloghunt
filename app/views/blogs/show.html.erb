@@ -22,18 +22,16 @@
 	    	</div>
 		  	<div class="panel-body">
 
-        <% @blog.tag_list.each do |f| %>
-                  <%= link_to f, tag_path(f), class: "btn btn-sm btn-default" %>
-                  <% end %>
+       
 
 		    	<div class="row">
 
-		      	<div class="col-md-7">
+		      	<div class="col-md-6">
 
 		          
 			    		<div id="gallery-1" class="royalSlider rsDefault">
 
-							   <%=link_to( image_tag(@blog.image.url(:medium), :class => " blog-image", :style => "width:85%; height:300px;"), @blog.url, target: "_blank") %> 
+							   <%=link_to( image_tag(@blog.image.url(:medium), :class => " blog-image", :style => "width:85%; height:250px;"), @blog.url, target: "_blank") %> 
 								
 									  
 			  			</div>
@@ -63,6 +61,10 @@
 									<div class="panel panel-default show-panel ">
 
                   <h4><%=@blog.description%> </h4>
+
+                   <% @blog.tag_list.each do |f| %>
+                  <%= link_to f, tag_path(f), class: "btn btn-sm btn-default" %>
+                  <% end %>
                   
 
 
